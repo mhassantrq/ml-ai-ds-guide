@@ -24,8 +24,13 @@ tokens = updated_text.split(' ')
 print(tokens[:10])
 
 """
-this above given straight forward method of tokenization is not useful as white spaces are removed and we cannot use tokens' sequence
+this above given straight forward method of tokenization is not useful enough
 
-lets use regular expressions for this purpose
+lets use regular expressions for this purpose to include empty spaces as well as some puntuations for split
 """
 
+tokens = re.split(r'(\s|[.,:;])', updated_text)
+print(tokens[:100])      #   tokens inclusing empty spaces
+
+updated_tokens = [t for t in tokens if t and not t.isspace()]
+print(updated_tokens[:100])
