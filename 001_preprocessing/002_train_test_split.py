@@ -7,7 +7,7 @@ has been achieved by the trained model.
 # import pandas to read cav file in data frame
 import pandas as pd
 
-# import train test split from sklearn to split the data
+# import train_test_split from sklearn to split the data
 from sklearn.model_selection import train_test_split
 
 # read file
