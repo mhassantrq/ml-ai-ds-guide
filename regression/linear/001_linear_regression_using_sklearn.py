@@ -19,4 +19,6 @@ lin_model.fit(x_data, y_data)
 
 print(lin_model.predict([[50]]))
 
+plt.plot(x_data, lin_model.predict(x_data), color='red')
+
 plt.show()
