@@ -1,15 +1,25 @@
 import pandas as pd
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.decomposition import LatentDirichletAllocation
+from collections import defaultdict
+import re
 
 df = pd.read_csv('data/dataset.csv')
 
-vect = CountVectorizer()
-words_count = vect.fit_transform(df['text'][0:5])
+temp_dataset = df['text'][0:5]
+dataset = []
+
+for d in temp_dataset:
+    d = re.sub(r'<.*?>', '', d)
+    d = d.lower()
+    dataset.append(d)
+
+vect = CountVectorizer(stop_words='english')
+words_count = vect.fit_transform(dataset)
 
 words = vect.get_feature_names_out()
 
-lda = LatentDirichletAllocation(n_components=2, random_state=43)
+lda = LatentDirichletAllocation(n_components=5)
 lda.fit(words_count)
 
 t_list = []
