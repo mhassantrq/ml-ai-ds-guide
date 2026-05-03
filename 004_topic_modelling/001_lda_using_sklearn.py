@@ -1,5 +1,5 @@
 import pandas as pd
-from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
 from sklearn.decomposition import LatentDirichletAllocation
 from collections import defaultdict
 import re
@@ -14,7 +14,8 @@ for d in temp_dataset:
     d = d.lower()
     dataset.append(d)
 
-vect = CountVectorizer(stop_words='english')
+#vect = CountVectorizer(stop_words='english')
+vect = TfidfVectorizer(stop_words='english')
 words_count = vect.fit_transform(dataset)
 
 words = vect.get_feature_names_out()
