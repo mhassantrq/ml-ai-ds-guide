@@ -25,3 +25,21 @@
     1.  Linear Regression using scipy
     2.  Linear Regression using sklearn
     3.  Linear Regression using multi variables
+
+### 4.  Clustering
+    1.  Kmeans Clustering
+
+### 5.  Topic Modelling
+    1.  Using LDA
+
+### 6.  Sentiment Analysis
+    1.  Naive Bayes using sklearn
+
+### 7.  Digital Image Processing
+    1.  Read Image
+    2.  Show Image
+
+### 8.  Classification
+    1.  Decision Tree using sklearn
+    2.  SVM using sklearn
+    3.  Artificial Neural Network using torch
