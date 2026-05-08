@@ -3,15 +3,15 @@
 
 *All about Machine Learning, Artificial Intelligence and Data Science*
 
-##  Libraries and Modules
-### Plots and Graphs
-####    Scatter, Line, Bar, Histogram, Pie
-### Random
-### Pandas
-### Statistics
-### Matplotlib
-### Seaborn
-### Maths
+###  1. Libraries and Modules
+    -   Plots and Graphs
+        -   Scatter, Line, Bar, Histogram, Pie
+    -   Random
+    -   Pandas
+    -   Statistics
+    -   Matplotlib
+    -   Seaborn
+    -   Maths
 
 ##  
 2. Maths and Stats (For ds, ai and ml)
