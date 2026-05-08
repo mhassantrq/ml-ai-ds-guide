@@ -3,31 +3,25 @@
 
 *All about Machine Learning, Artificial Intelligence and Data Science*
 
-###  1. Libraries and Modules
-    -   Plots and Graphs
-        -   Scatter, Line, Bar, Histogram, Pie
-    -   Random
-    -   Pandas
-    -   Statistics
-    -   Matplotlib
-    -   Seaborn
-    -   Maths
+### 1. Libraries and Modules
+    1.  Plots and Graphs
+            Scatter, Line, Bar, Histogram, Pie
+    2.  Random
+    3.  Pandas
+    4.  Statistics
+    5.  Matplotlib
+    6.  Seaborn
+    7.  Maths
 
-##  
-2. Maths and Stats (For ds, ai and ml)
-3. Data Basics
-4. Data Preprocessing
-5. Data Visualization
-6. ML
-7. Supervised Learning
-9. Unsupervised Learning
-10. Reinforcement Learning
-11. Digitial Image Processing
-12. NLP
-13. ML Algorithms
-14. NN, Deep Learning
-15. AI and other APIs
-16. Tensorflow
-17. AI RAG, LLM
-18. Django and Flask
-19. Books and Projects
+### 2.  Preprocessing
+    1.  Reading Data
+    2.  Train test split
+    3.  Tokenization
+    4.  Regular expressions
+    5.  Filling Missing Values
+    6.  Term Frequency - Inverse Document Frequency
+
+### 3.  Regression
+    1.  Linear Regression using scipy
+    2.  Linear Regression using sklearn
+    3.  Linear Regression using multi variables
