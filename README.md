@@ -20,6 +20,10 @@
     4.  Regular expressions
     5.  Filling Missing Values
     6.  Term Frequency - Inverse Document Frequency
+    7.  Bag of Words
+    8.  NGrams
+    9.  Stemming
+    10. Lemmatizer
 
 ### 3.  Regression
     1.  Linear Regression using scipy
@@ -27,7 +31,8 @@
     3.  Linear Regression using multi variables
 
 ### 4.  Clustering
-    1.  Kmeans Clustering
+    1.  Kmeans Clustering with Numerical Data
+    2.  Kmeans Clustering with Textual Data
 
 ### 5.  Topic Modelling
     1.  Using LDA
@@ -43,3 +48,6 @@
     1.  Decision Tree using sklearn
     2.  SVM using sklearn
     3.  Artificial Neural Network using torch
+
+### 9.  From Zero
+    1.  Lectures (to be added)
