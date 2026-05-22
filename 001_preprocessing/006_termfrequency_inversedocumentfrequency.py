@@ -1,33 +1,5 @@
 """
 Term frequency, inverse document frequency. It is used to determine how important a word is to a document.
-"""
-
-#   import tfidf vectorizer from sklearn
-from sklearn.feature_extraction.text import TfidfVectorizer
-import pandas as pd
-
-#   read data
-df = pd.read_csv('data/dataset.csv')
-
-#   just to view the dataset 
-print(df['text'][0:5])
-
-#   initialize the vectorizer object
-vect = TfidfVectorizer()
-
-#   to get vocabulary, idf value and convert text into number
-tfidf_arr = vect.fit_transform(df['text'][0:5])
-
-#   now get all unique words in the dataset
-unique_words = vect.get_feature_names_out()
-
-#   print the list of all unique words
-print(f'Unique Words: {unique_words}')
-
-#   the matrix to represent the tf-idf values
-print(f'tf-idf Array: {tfidf_arr.toarray()}')
-
-"""
 
 each document is now a row in this matrix. and all the unique words are columns in the matrix.
 in each row, the numbers are represented from 0 to maximum 1.
@@ -45,3 +17,56 @@ the columns w1, w2,and so on, represent the unique words in all the documents co
 
 so, if in the row2 the word 4 represents a score of 0.4, this means that specific word is important in the document 2.
 """
+
+
+"""
+1. term frquency - onverse document frequency using sklearn
+"""
+from sklearn.feature_extraction.text import TfidfVectorizer
+import pandas as pd
+
+
+df = pd.read_csv('data/dataset01.csv')
+
+#print(df['text'][0:5])
+
+
+vect = TfidfVectorizer()
+tfidf_arr = vect.fit_transform(df['text'][0:5])
+
+unique_words = vect.get_feature_names_out()
+
+#print(f'Unique Words: {unique_words}')
+#print(f'tf-idf Array: {tfidf_arr.toarray()}')
+
+
+"""
+2. term frequency - inverse document frequency from scratch without using sklearn
+"""
+
+from collections import Counter, defaultdict
+import math
+
+inversedf = defaultdict(int)
+doc_word_count = defaultdict(int)
+
+df_list = list(df['text'][0:5])
+df_list = [row.lower().split() for row in df_list]
+
+df_list = [Counter(row) for row in df_list]
+
+words = ' '.join(df['text'][0:5].astype(str).values.flatten()).split()
+
+for word in words:
+    for i in range(len(df['text'][0:5])):
+        if word in df['text'][i]:
+            doc_word_count[word] += 1
+
+for word in words:
+    inversedf[word] = math.log(len(df_list) / doc_word_count[word])
+
+for i in range(len(df_list)):
+    for t in df_list[i]:
+        termf = df_list[i][t] / len(df_list[i])
+        termf_inversedf = termf*inversedf[t]
+        print(f'For document {i} and term {t}, the termf-inversedf: {termf_inversedf}')
