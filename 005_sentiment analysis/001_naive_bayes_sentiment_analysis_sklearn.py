@@ -6,7 +6,7 @@ from sklearn.naive_bayes import MultinomialNB
 from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import CountVectorizer
 
-df = pd.read_csv('data/dataset.csv')
+df = pd.read_csv('data/dataset01.csv')
 
 #print(df.columns)   #   get column names
 
