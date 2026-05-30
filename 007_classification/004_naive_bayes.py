@@ -1,5 +1,8 @@
 """
 Naives bayes using sklearn
+
+1. Multinomial Naive Bayes
+2. Gaussian Naive Bayes
 """
 
 import pandas as pd
