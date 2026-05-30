@@ -1,5 +1,14 @@
 """
-Logistic Regression
+Logistic Regression using sklearn
+
+Logistic regression is used to predict class in binary classification cases.
+It uses sigmoid function to convert values between 0 and 1 for finding out probabilities.
+
+Logistic regression is a supervised algorithm. Therefore, it requires labelled dataset.
+
+Below is the implementation of logistic regression using sklearn.
+However, if you're interested in its implementation from scratch. The same is available in the
+repo named: 'trying-ml-models-from-scratch'
 """
 
 import pandas as pd
