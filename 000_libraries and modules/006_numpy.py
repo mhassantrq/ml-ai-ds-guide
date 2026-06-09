@@ -71,4 +71,10 @@ print(f'max of array: {np.max(arr)}')
 print(f'argmax of array: {np.argmax(arr)}')     #   last index
 print(f'argmin of array: {np.argmin(arr)}')     #   first index
 
+#   random numbers
 
+np.random.seed(0)   #   makes sure the same random numbers generate again
+
+print(f'5 random numbers between 0 and 1 {np.random.rand(5)}')
+print(f'5 random numbers from normal distribution {np.random.randn(5)}')
+print(f'3 random numbers between given range {np.random.randint(5, 15, 3)}')
