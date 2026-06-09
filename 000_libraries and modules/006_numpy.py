@@ -55,3 +55,20 @@ print(f'reshaped array: {arr.reshape(6,2)}')
 
 #   flatten array
 print(f'reshaped array: {arr.flatten()}')   #   flatten to one dimensional array
+
+#   transpose array
+print(f'reshaped array: {arr.T}')
+
+#   arithmetic operations
+print(f'additon of 5 to each: {arr + 5}')
+
+#   stats operations
+print(f'mean of array: {np.mean(arr)}')
+print(f'standard deviation of array: {np.std(arr)}')
+print(f'max of array: {np.max(arr)}')
+
+#   index positions in array
+print(f'argmax of array: {np.argmax(arr)}')     #   last index
+print(f'argmin of array: {np.argmin(arr)}')     #   first index
+
+
