@@ -78,3 +78,18 @@ np.random.seed(0)   #   makes sure the same random numbers generate again
 print(f'5 random numbers between 0 and 1 {np.random.rand(5)}')
 print(f'5 random numbers from normal distribution {np.random.randn(5)}')
 print(f'3 random numbers between given range {np.random.randint(5, 15, 3)}')
+
+
+
+m1 = np.array([
+    [1, 2, 3],
+    [3, 4, 5]
+])
+
+m2 = np.array([
+    [1, 3],
+    [2, 4],
+    [3, 5]
+])
+
+print(np.dot(m1, m2))
