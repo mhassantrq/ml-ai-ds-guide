@@ -1,6 +1,7 @@
 """
-Used for numerical computing, scientific analysis. Fasters, basis for many libraries. Used for many purposes in ai, ml and ds.
+Used for numerical computing, scientific analysis. Its fasters. Its basis for many libraries. Used for many purposes in ai, ml and ds.
 """
+
 import numpy as np
 
 
@@ -80,6 +81,19 @@ print(f'5 random numbers from normal distribution {np.random.randn(5)}')
 print(f'3 random numbers between given range {np.random.randint(5, 15, 3)}')
 
 
+#   matrix multiplication
+"""
+However, note that before matrix multiplication, the columns of first matrix and rows of second matrix should be same.
+
+as seen in below example.
+dimensions of:
+    (rows, columns)
+m1 = (2, 3)
+m2 = (3, 2)
+
+so column numbers of first and row numbers of second are both same, i.e., 3.
+
+"""
 
 m1 = np.array([
     [1, 2, 3],
