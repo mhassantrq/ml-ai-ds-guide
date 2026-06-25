@@ -25,3 +25,22 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3)
 
 print(f'records of training set {len(X_train)}')
 print(f'records of test set {len(X_test)}')
+
+
+"""
+However, train test split can be done manually by simple dividing the dataset into separate containers of train and test labels.
+
+for example:
+
+if a dictionary named 'data' has dataset of say 1000 rows. and you want to separate it into 80-20 split manually.
+then you may proceed as follows:
+
+train_size = len(data)*0.8
+train_size = int(train_size)
+
+train_data = data[:train_size]
+test_data = data[train_size:]
+
+this way using slicing, the 'train_data' container will have data from 0 up until train_size which in our example is 799.
+and 'test_data' will contain data from 800 to 1000.
+"""
