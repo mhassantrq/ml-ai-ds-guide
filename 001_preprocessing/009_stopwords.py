@@ -6,9 +6,6 @@ df = pd.read_csv('data/dataset01.csv')
 
 text = df['text'][0:10]
 
-print(text[0])
-print('================')
-
 #   1.  Using handmade list of stop words
 
 stopwords = pd.read_csv('data/stopwords.csv')
